@@ -64,62 +64,8 @@
         </section>
 
         <h1 class="deliver-section-title" id="dostavi">Dostavi paket...</h1>
-        <section class="section is-medium deliver-section">
-            <form class="deliver-form">
-                <b-field label="Ime i prezime" :label-position="labelPosition">
-                    <b-input value="Work in progress..."></b-input>
-                </b-field>
 
-                <b-field label="Email" :label-position="labelPosition">
-                    <b-input type="email" value="" maxlength="50"> </b-input>
-                </b-field>
-
-                <b-field label="Kapacitet">
-                    <b-slider size="is-large" :value="10"> </b-slider>
-                </b-field>
-
-                <b-field grouped>
-                    <b-field label="Polazište" expanded>
-                        <b-select placeholder="Odaberite" expanded>
-                            <option value="zg">Zagreb</option>
-                            <option value="st">Split</option>
-                            <option value="ri">Rijeka</option>
-                            <option value="os">Osijek</option>
-                        </b-select>
-                    </b-field>
-                    <b-field label="Odredište" expanded>
-                        <b-select placeholder="Odaberite" expanded>
-                            <option value="zg">Zagreb</option>
-                            <option value="st">Split</option>
-                            <option value="ri">Rijeka</option>
-                            <option value="os">Osijek</option>
-                        </b-select>
-                    </b-field>
-                </b-field>
-                <b-field label="Napomena" :label-position="labelPosition">
-                    <b-input maxlength="30" type="textarea"></b-input>
-                </b-field>
-
-                <b-field
-                    label="Datum i vrijeme polaska"
-                    :label-position="labelPosition"
-                >
-                    <b-datetimepicker
-                        rounded
-                        placeholder="Odaberite..."
-                        icon="calendar-today"
-                        horizontal-time-picker
-                    >
-                    </b-datetimepicker>
-                </b-field>
-
-                <b-field label="Cijena" :label-position="labelPosition">
-                    <b-numberinput></b-numberinput>
-                </b-field>
-
-                <input type="submit" />
-            </form>
-        </section>
+        <inputForm />
 
         <section class="is-medium section" id="posalji">
             <deliveryAd />
@@ -136,11 +82,14 @@
 
 <script>
 import deliveryAd from "./components/deliveryAd.vue";
+import inputForm from "./components/inputForm.vue";
+
 
 export default {
     name: "App",
     components: {
-        deliveryAd
+        deliveryAd,
+        inputForm
     },
 };
 </script>
