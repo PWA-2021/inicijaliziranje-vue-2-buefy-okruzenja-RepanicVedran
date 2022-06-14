@@ -106,7 +106,7 @@ export default {
 
 .deliveryAd-mainWrap:hover {
     box-shadow: 10px 10px 15px;
-    animation: box-shadow 1.5s ease-in-out;
+    transition: box-shadow 2s ease-in-out;
     width: 41%;
     -webkit-transition: width 0.5s ease-in-out;
 }
