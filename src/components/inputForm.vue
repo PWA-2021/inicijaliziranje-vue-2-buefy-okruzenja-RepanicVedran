@@ -61,7 +61,11 @@
                 <b-input v-model="img"></b-input>
             </b-field>
 
-            <b-button @click="addItem()" type="is-primary" inverted outlined
+            <b-button
+                @click="addItem(), reloadPage()"
+                type="is-primary"
+                inverted
+                outlined
                 >Objavi</b-button
             >
             <b-button @click="resetData()" type="is-primary" inverted outlined
@@ -91,6 +95,10 @@
     },
 
     methods: {
+         reloadPage() {
+      setTimeout(() => {window.location.reload();},1500);
+    },
+
          async addItem() {
             const res = await axios.post(`http://localhost:3000/ads`, 
                 {
